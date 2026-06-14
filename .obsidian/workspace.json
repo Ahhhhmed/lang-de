@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "51d67167aaa7d787",
+    "type": "split",
+    "children": [
+      {
+        "id": "ebe680d37a17ea3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "13d3757b68488a61",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "raw_notes/Intensivkurs Nenad/images/image3.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "image3"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "104e02c937cb1fcc",
+    "type": "split",
+    "children": [
+      {
+        "id": "e00d0ed1e21a5d88",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1723a0e6c91c6302",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "40ecbc92bf9049a8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "91040a901801f2ff",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "07e79a3aad5a97dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "04181e4b5932f1d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "13d6421eae97a474",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "raw_notes/Intensivkurs Nenad/images/image14.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for image14"
+            }
+          },
+          {
+            "id": "f52256a25b6ea1c8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "raw_notes/Intensivkurs Nenad/images/image14.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from image14"
+            }
+          },
+          {
+            "id": "68cc6a1b24bb2a5f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "b6dadba5bfbbb759",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "cb2405d48120d5a6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "raw_notes/Intensivkurs Nenad/images/image14.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of image14"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "13d3757b68488a61",
+  "lastOpenFiles": [
+    "raw_notes/Intensivkurs Nenad/images/image3.md",
+    "raw_notes/Intensivkurs Nenad/images/image3.jpg",
+    "raw_notes/Intensivkurs Nenad/images/image2.md",
+    "raw_notes/Intensivkurs Nenad/images/image2.jpg",
+    "raw_notes/Intensivkurs Nenad/images/image22.jpg",
+    "raw_notes/Intensivkurs Nenad/images/image10.md",
+    "raw_notes/Intensivkurs Nenad/images/image8.md",
+    "raw_notes/Intensivkurs Nenad/images/image7.md",
+    "raw_notes/Intensivkurs Nenad/images/image5.md",
+    "raw_notes/Intensivkurs Nenad/images/image4.md",
+    "raw_notes/Intensivkurs Nenad/images/image22.md",
+    "raw_notes/Intensivkurs Nenad/images/image15.md",
+    "raw_notes/Intensivkurs Nenad/images/image16.md",
+    "raw_notes/Intensivkurs Nenad/images/image17.md",
+    "raw_notes/Intensivkurs Nenad/images/image27.md",
+    "raw_notes/Intensivkurs Nenad/images/image26.md",
+    "raw_notes/Intensivkurs Nenad/images/image25.md",
+    "raw_notes/Intensivkurs Nenad/images/image14.md",
+    "raw_notes/Intensivkurs Nenad/images/image14.jpg",
+    "raw_notes/Intensivkurs Nenad/images/image13.md",
+    "raw_notes/Intensivkurs Nenad/images/image12.md",
+    "raw_notes/Intensivkurs Nenad/images/image11.md",
+    "raw_notes/Intensivkurs Nenad/images/image9.md",
+    "raw_notes/Intensivkurs Nenad/images/image6.md",
+    "raw_notes/Intensivkurs Nenad/images/image1.md"
+  ]
+}
