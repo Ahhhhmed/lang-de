@@ -1,90 +1,64 @@
-# 🧩 Konjunktiv II: Wishes & Polite Requests
+# KONJUNKTIV II
 
-> [Note: Board shows Konjunktiv II forms for *sein*, *haben*, *werden + Infinitiv*, and *können*.]
+## Wünsche
 
----
+Ich wünschte, es wäre kälter.
 
-### 1. Wünsche (Wishes)
+### sein
+*   ich wäre
+*   du wär<span style="color: red; text-decoration: underline;">st</span>
+*   er wäre
+*   wir wären
+*   ihr wär<span style="color: red; text-decoration: underline;">t</span>
+*   sie wären
 
-Useful expression:
-*   **Ich <span style="color: red; text-decoration: underline;">wünschte</span>, es <span style="color: red; font-weight: bold;">wäre</span> kälter.**
+*   Ich wäre gern zu Hause.
 
-#### *sein* in Konjunktiv II
+### haben
+*   ich hätte
+*   du hätte<span style="color: red; text-decoration: underline;">st</span>
+*   er hätte
+*   wir hätten
+*   ihr hätte<span style="color: red; text-decoration: underline;">t</span>
+*   sie hätten
 
-| Pronoun | Form |
-| :--- | :--- |
-| ich | <span style="color: red; font-weight: bold;">wäre</span> |
-| du | <span style="color: red; font-weight: bold;">wärst</span> |
-| er / sie / es | <span style="color: red; font-weight: bold;">wäre</span> |
-| wir | <span style="color: red; font-weight: bold;">wären</span> |
-| ihr | <span style="color: red; font-weight: bold;">wärt</span> |
-| sie / Sie | <span style="color: red; font-weight: bold;">wären</span> |
-
-Example:
-*   Ich <span style="color: red; font-weight: bold;">wäre</span> gern zu Hause.
-
-#### *haben* in Konjunktiv II
-
-| Pronoun | Form |
-| :--- | :--- |
-| ich | <span style="color: red; font-weight: bold;">hätte</span> |
-| du | <span style="color: red; font-weight: bold;">hättest</span> |
-| er / sie / es | <span style="color: red; font-weight: bold;">hätte</span> |
-| wir | <span style="color: red; font-weight: bold;">hätten</span> |
-| ihr | <span style="color: red; font-weight: bold;">hättet</span> |
-| sie / Sie | <span style="color: red; font-weight: bold;">hätten</span> |
-
-Example:
-*   Ich <span style="color: red; font-weight: bold;">hätte</span> gern einen Kaffee.
+*   Ich hätte gern einen Kaffee.
 
 ---
 
-### 2. *würde* + Infinitiv
+## was würdest du machen?
 
-| Pronoun | Form |
-| :--- | :--- |
-| ich | <span style="color: red; font-weight: bold;">würde</span> + Infinitiv |
-| du | <span style="color: red; font-weight: bold;">würdest</span> + Infinitiv |
-| er / sie / es | <span style="color: red; font-weight: bold;">würde</span> + Infinitiv |
-| wir | <span style="color: red; font-weight: bold;">würden</span> + Infinitiv |
-| ihr | <span style="color: red; font-weight: bold;">würdet</span> + Infinitiv |
-| sie / Sie | <span style="color: red; font-weight: bold;">würden</span> + Infinitiv |
-
-Examples:
-*   Ich <span style="color: red; font-weight: bold;">würde</span> essen.
-*   Du <span style="color: red; font-weight: bold;">würdest</span> kochen.
-*   Er <span style="color: red; font-weight: bold;">würde</span> gehen.
-*   Wir <span style="color: red; font-weight: bold;">würden</span> schauen.
-*   Ihr <span style="color: red; font-weight: bold;">würdet</span> lernen.
-*   Sie <span style="color: red; font-weight: bold;">würden</span> spazieren.
+### werden + INF
+*   würde + essen
+*   würdest + kochen
+*   würde + gehen
+*   würden + schauen
+*   würdet + lernen
+*   würden + spazieren
 
 ---
 
-### 3. Höfliche Bitte with *könnte*
+## Höfliche Bitte
 
-| Pronoun | Form |
-| :--- | :--- |
-| ich | <span style="color: red; font-weight: bold;">könnte</span> |
-| du | <span style="color: red; font-weight: bold;">könntest</span> |
-| er / sie / es | <span style="color: red; font-weight: bold;">könnte</span> |
-| wir | <span style="color: red; font-weight: bold;">könnten</span> |
-| ihr | <span style="color: red; font-weight: bold;">könntet</span> |
-| sie / Sie | <span style="color: red; font-weight: bold;">könnten</span> |
+-> Nenad, <span style="border: 1.5px solid red; padding: 2px;">könntest</span> du das Fenster öffnen?
+-> Könntest du das Licht anmachen?
+-> könnten Sie die Flasche in die Küche bringen?
 
-Polite request examples:
-*   Nenad, **könntest** du das Fenster öffnen?
-*   **Könntest** du das Licht anmachen?
-*   **Könnten** Sie die Flasche in die Küche bringen?
-*   **Könnte** ich ein Messer haben?
-*   **Könnten** Sie mir H. bringen?
+### können (Konj. II)
 
-> [Note: Board contrasts **könnte** with the normal past form **konnte**.]
+| | | | |
+| :---: | :--- | :--- | :--- |
+| ⚀ | ich | könnte | ➔ Könnte ich ein Messer haben? |
+| ⚁ | du | könnte<span style="color: red; text-decoration: underline;">st</span> | |
+| ⚂ | er | könnte | **könnte ≠ konnte** |
+| ⚃ | wir | könnten | |
+| ⚄ | ihr | könnte<span style="color: red; text-decoration: underline;">t</span> | |
+| ⚅ | Sie/sie | könnten | ➔ könnten Sie mir M. bringen? |
 
 ---
 
-### 💭 Dream Job / Dream House
+## Was wäre dein Traumjob?
+➔ Ich wäre (gern) ein Pilot.
+➔ Mein Traumjob wäre Pilot.
 
-*   Was wäre dein Traumjob?
-*   Ich wäre gern Pilot.
-*   Mein Traumjob wäre Pilot.
-*   Wo wäre dein Traumhaus?
+## Wo wäre dein Traumhaus?

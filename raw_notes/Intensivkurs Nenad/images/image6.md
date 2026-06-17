@@ -10,13 +10,13 @@ anfangen vs. aufhören
 
 Freunde einladen
 
-rufen ~ anrufen [phone]
+ruf<span style="color: red; text-decoration: underline;">en</span> ≃ <span style="border: 1.5px solid green; padding: 2px;">an</span><span style="color: green; text-decoration: underline;">rufen</span> [phone]
 
 geben vs. bekommen
 
 häufig
 
-gehören ~ im Besitz sein von
+gehören ≃ im Besitz sein von
 
 ankommen vs. weggehen
 

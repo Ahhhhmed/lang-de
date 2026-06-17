@@ -1,14 +1,14 @@
 # <span style="border: 2px solid #16a085; border-radius: 50%; padding: 4px 9px;">1</span>
 
-# GEMEINSAM etwas PLANEN
+# GEMEINSAM ETWAS PLANEN
 
-## einen Vorschlag machen (etw. vorschlagen):
+## => einen Vorschlag machen (etw. vor┆schlagen):
 
-*   Wie <span style="color: #8b0000; text-decoration: underline;">wäre es</span>, wenn ...?
-*   Wir <span style="color: #8b0000; text-decoration: underline;">könnten</span> ... [v].
-*   Ich <span style="color: #8b0000; border: 1.5px solid #8b0000; border-radius: 50%; padding: 1px 5px;">schlage</span> <span style="color: #8b0000; border: 1.5px solid #8b0000; border-radius: 50%; padding: 1px 5px;">vor</span>, wir <span style="color: #8b0000; text-decoration: underline;">gehen nach z.</span>
-*   Ich <span style="color: #8b0000; text-decoration: underline;">würde gern</span> ...
-*   <span style="color: #8b0000; border: 1.5px solid #8b0000; border-radius: 50%; padding: 1px 5px;">Ich denke</span>, wir <span style="color: #8b0000; text-decoration: underline;">könnten</span> ...
+*   ↳ Wie <span style="color: #8b0000; text-decoration: underline;">wäre es</span>, wenn ...?
+*   ↳ Wir <span style="color: #8b0000; text-decoration: underline;">könnten</span> ... [v].
+*   ↳ Ich <span style="color: #8b0000; border: 1.5px solid #8b0000; border-radius: 50%; padding: 1px 5px;">schlage</span> <span style="color: #8b0000; border: 1.5px solid #8b0000; border-radius: 50%; padding: 1px 5px;">vor</span>, wir <span style="color: #8b0000; text-decoration: underline;">gehen nach Z.</span>
+*   ↳ Ich <span style="color: #8b0000; text-decoration: underline;">würde gern</span> ...
+*   ↳ <span style="color: #8b0000; border: 1.5px solid #8b0000; border-radius: 50%; padding: 1px 5px;">Ich denke</span>, wir <span style="color: #8b0000; text-decoration: underline;">könnten</span> ...
 
 ---
 
@@ -16,9 +16,9 @@
 
 *   Ja, das ist eine gute Idee!
 *   Gute Idee!
-*   Gut, das können wir machen.
+*   Gut, das können wir machen<span style="color: red;">!</span>
 *   In Ordnung / Okay.
-*   Das klingt gut
+*   Das klingt gut.
 
 ---
 

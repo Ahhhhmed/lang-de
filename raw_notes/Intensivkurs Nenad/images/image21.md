@@ -1,63 +1,62 @@
-# 🗣️ B1 Presentation Structure
+# Handouts (Taped on the left)
 
-> [Note: Board gives a structure for a short presentation, including sentence starters and a handout on the left.]
+## Präsentation: Thema nennen
+Heute möchte ich über das Thema ... sprechen.
 
----
+## Struktur erklären
+Zuerst möchte ich über die allgemeine Situation sprechen.
+Danach spreche ich über meine persönlichen Erfahrungen und möchte Beispiele geben.
+Dann erzähle ich von der Situation in meinem Heimatland.
+Schliesslich spreche ich über die Vor- und Nachteile. [D.A] [A] *(Note: written in red under 'Vor-' and 'Nachteile' respectively)*
+:) *(Note: red smiley face next to 'Dann erzähle...')*
 
-### 🧭 Overall Structure
+## Heimatland
+In meinem Heimatland ...
+Im Vergleich zur Schweiz gibt es in meinem Land ...
+Zum Beispiel gibt es in meinem Heimatland ...
 
-| Section | Useful Phrases |
-| :--- | :--- |
-| **Thema nennen** | Guten Tag. / Ich möchte heute über das <span style="text-decoration: underline;">Thema</span> ... sprechen. |
-| **Struktur erklären** | <span style="color: red; border: 1.5px solid red; border-radius: 8px; padding: 1px 4px;">Zuerst</span> spreche ich über ... / <span style="color: red; border: 1.5px solid red; border-radius: 8px; padding: 1px 4px;">Danach</span> erzähle ich von ... / <span style="color: red; border: 1.5px solid red; border-radius: 8px; padding: 1px 4px;">Dann</span> ... / <span style="color: red; border: 1.5px solid red; border-radius: 8px; padding: 1px 4px;">Schliesslich</span> ... / <span style="color: red; border: 1.5px solid red; border-radius: 8px; padding: 1px 4px;">Am Ende</span> ... |
-| **Inhalt** | persönliche Situation / Heimatland / Vorteile und Nachteile / Meinung |
-| **Ende** | Zum Schluss ... / Schliesslich ... / Danke für Ihre Aufmerksamkeit! |
+## Vor- und Nachteile nennen
+Ein Vorteil von X ist, <span style="color: red; text-decoration: underline;">dass</span> ...
+Ein Nachteil von X ist... <span style="color: red; text-decoration: underline;">dass</span> ...
 
----
+## eigene Meinung sagen
+Ich glaube, <span style="color: red; text-decoration: underline;">dass</span> ...
+*(Note: 'Verb' is written in red below 'dass')*
+Meiner Meinung nach ist ...
 
-### 📌 Content Checklist
-
-*   **Persönliche Situation**
-*   **Heimatland**
-    *   In meinem Heimatland gibt es ...
-*   **Vorteile + Nachteile**
-*   **Meinung**
-*   **Ende**
-
----
-
-### 📄 Handout Sentence Starters
-
-#### Präsentation: Thema nennen
-*   Heute möchte ich über das <span style="text-decoration: underline;">Thema</span> ... sprechen.
-
-#### Struktur erklären
-*   <span style="color: red; text-decoration: underline;">Zuerst</span> möchte ich über die allgemeine Situation sprechen.
-*   <span style="color: red; text-decoration: underline;">Danach</span> spreche ich über meine persönlichen Erfahrungen und möchte Beispiele geben.
-*   <span style="color: red; text-decoration: underline;">Dann</span> erzähle ich von der Situation in meinem Heimatland.
-*   <span style="color: red; text-decoration: underline;">Schliesslich</span> spreche ich über die Vor- und Nachteile.
-
-#### Heimatland
-*   In meinem Heimatland ...
-*   Im Vergleich zur Schweiz gibt es in meinem Land ...
-*   Zum Beispiel gibt es in meinem Heimatland ...
-
-#### Vor- und Nachteile nennen
-*   Ein Vorteil von X ist, <span style="color: red; text-decoration: underline;">dass</span> ...
-*   Ein Nachteil von X ist, <span style="color: red; text-decoration: underline;">dass</span> ...
-
-#### Eigene Meinung sagen
-*   Ich glaube, dass ...
-*   Meiner Meinung nach ist ...
-
-#### Präsentation beenden
-*   <span style="color: red; text-decoration: underline;">Zum Schluss</span> möchte ich sagen, ...
-*   <span style="color: red; text-decoration: underline;">Schliesslich</span> möchte ich sagen, ...
-*   Ich bedanke mich für Ihre Aufmerksamkeit.
-*   Haben Sie Fragen?
+## Präsentation beenden
+Zum Schluss möchte ich sagen, ...
+Schliesslich möchte ich sagen, ...
+Ich bedanke mich für Ihre Aufmerksamkeit. / <span style="color: red;">Danke für Ihre Aufmerksamkeit!</span>
+<span style="color: red;">Haben Sie Fragen?</span>
+<span style="color: red;">Gibt es Fragen?</span>
 
 ---
 
-### 📚 Vocabulary Note
+# Whiteboard Notes (Handwritten)
 
-*   **besonders** = especially
+• Guten Tag.
+Ich möchte heute über das Thema ... sprechen.
+} THEMA
+
+• <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 2px;">Zuerst</span> spreche ich über...
+<span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 2px;">Danach</span> ... <span style="color: green; border: 1.5px solid green; border-radius: 50%; padding: 2px;">erzähle</span> ich von
+<span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 2px;">Dann</span>...
+<span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 2px;">Schliesslich</span> / Am Ende...
+} STRUKTUR
+
+• Persönliche Situation
+• Heimatland -> In meinem Heimatland <span style="color: red; text-decoration: underline;">gibt es</span>
+• Vorteile + Nachteile
+• Meinung
+} INHALT
+
+• Ende
+  ↳ Zum Schluss | <span style="color: green;">Schliesslich</span>
+} ENDE
+
+Danke für Ihre Aufmerksamkeit!
+
+besonders
+    │
+especially

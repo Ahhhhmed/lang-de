@@ -1,31 +1,19 @@
-# ✍️ Present Tense Practice & Sentence Types (Fragesätze)
-
-> [Note: Board details practice sentences with highlights on conjugation endings, particles, prepositions, and question types]
-
----
-
-### 💬 Practice Sentences
-
-*   Sie <span style="text-decoration: underline;">spielen gern</span> Fussball.
-*   Du arbeit<span style="color: red; text-decoration: underline;">e</span>st immer. *(Note: extra 'e' inserted for pronunciation)*
-*   Ihr joggt <span style="text-decoration: underline;">nicht gern</span>.
-*   Ihr f<span style="color: red; text-decoration: underline;">a</span>hrt nicht gern Velo.
-*   Ich spiele **zu Hause** Fussball. *(static location)*
-*   Ihr wandert nie<sup>[Part.]</sup> nach<sup>[direkt]</sup> **Hause**. *(direction)*
-*   Wir treiben nicht gern Sport im Hotel.
-*   Er f<span style="color: red;">ä</span>hrt selten Velo **in der Schule**. *(static Dativ)*
-*   Er f<span style="color: red;">ä</span>hrt selten <span style="border: 1px solid black; border-radius: 50%; padding: 2px;">mit</span> <span style="text-decoration: underline;">dem Velo</span> **in die Schule**. *(direction Akkusativ)*
+*   Sie <span style="color: red; text-decoration: underline;">spielen gern</span> Fussball.
+*   Du arbeit<span style="border-bottom: 1.5px solid red;">e</span>st immer.
+*   Ihr joggt <span style="color: red; text-decoration: underline;">nicht gern</span>.
+*   Ihr <span style="color: red; text-decoration: underline;">fahrt nicht gern</span> Velo.
+*   Ich spiele zu Hause Fussball.
+*   Ihr wandert <span style="color: red; text-decoration: underline;">nie</span><sup>[Part.]</sup> <span style="color: red; text-decoration: underline;">nach</span><sup>[direkt]</sup> Hause.
+*   Wir <span style="color: red; text-decoration: underline;">treiben</span> <span style="color: red; text-decoration: underline;">nicht gern</span> Sport ⇄ im Hotel.
+*   Er fährt selten Velo ⇄ in der Schule.
+*   Er fährt selten <span style="border: 1px solid black; border-radius: 50%; padding: 2px;">mit</span> <span style="color: red; text-decoration: underline;">dem Velo</span> ⇄ in die Schule.
 
 ---
 
-### 🚦 Question Structures (Fragesätze)
+## Ja/Nein-Frage
 
-For separable verbs (e.g., **aufräumen** ➔ *räumt... auf*), the prefix is kicked to the end of the question.
-
-#### 1. Yes/No Questions (Ja/Nein-Frage)
-*Verb goes to Position 1:*
 *   <span style="text-decoration: underline;">Räumen</span> Sie am Mittwoch <span style="text-decoration: underline;">auf</span>?
 
-#### 2. W-Questions (W-Frage)
-*Question word goes to Position 1, verb goes to Position 2:*
-*   Wie lange <span style="text-decoration: underline;">räumen</span> Sie am Mittwoch <span style="text-decoration: underline;">auf</span>?
+## W-Frage
+
+*   <span style="text-decoration: underline;">Wie lange</span> <span style="text-decoration: underline;">räumen</span> Sie am Mittwoch <span style="text-decoration: underline;">auf</span>?

@@ -1,39 +1,19 @@
-# 💭 Irreale Wunschsätze mit *wenn* (Konjunktiv II)
+# IRREALE WUNSCHSÄTZE
 
-> [Note: Board practices unreal wishes and hypothetical sentences with *wenn*, *wäre*, *hätte*, and *würde*.]
-
----
-
-### ❓ Leitfrage
-
-**Was <span style="color: red; text-decoration: underline;">würdest</span> du machen, <span style="color: red; text-decoration: underline;">wenn</span> ...?**  
-*(What would you do if ...?)*
-
-Examples from the board:
-*   Was <span style="color: red; text-decoration: underline;">würdest</span> du machen, **wenn** du 10 Mio. CHF gewinnen <span style="color: red; font-weight: bold;">würdest</span>?
-*   Was <span style="color: red; text-decoration: underline;">würdest</span> du machen, **wenn** du reich <span style="color: red; font-weight: bold;">wärst</span>?
-*   Was <span style="color: red; text-decoration: underline;">würdest</span> du machen, **wenn** deine Frau einen teuren BMW <span style="color: red; font-weight: bold;">hätte</span>?
-*   Was <span style="color: red; text-decoration: underline;">würdest</span> du machen, **wenn** deine Lehrerin heute krank <span style="color: red; font-weight: bold;">wäre</span>?
+-> Was würdest du machen, wenn ...
+*   ... du 10. Mio CHF gewinnen würdest?
+*   ... du reich wärst?
+*   ... deine Frau einen teuren BMW hätte?
+*   ... deine Lehrerin heute krank wäre?
 
 ---
 
-### 📊 Satzstruktur
-
-With **wenn** in a subordinate clause, the conjugated verb goes to the end.
-
-| Nebensatz with *wenn* | Main Clause |
-| :--- | :--- |
-| <span style="color: red; text-decoration: underline;">Wenn</span> ich reich <span style="color: red; font-weight: bold;">wäre</span>, | <span style="color: red; font-weight: bold;">würde</span> ich nach Zug ziehen. |
-| <span style="color: red; text-decoration: underline;">Wenn</span> meine Frau einen teuren BMW <span style="color: red; font-weight: bold;">hätte</span>, | <span style="color: red; font-weight: bold;">würde</span> ich die ganze Zeit den BMW fahren. |
-| <span style="color: red; text-decoration: underline;">Wenn</span> meine Lehrerin heute krank <span style="color: red; font-weight: bold;">wäre</span>, | <span style="color: red; font-weight: bold;">würde</span> ich nach Hause gehen. |
-| <span style="color: red; text-decoration: underline;">Wenn</span> ich 10 Mio. CHF gewinnen <span style="color: red; font-weight: bold;">würde</span>, | <span style="color: red; font-weight: bold;">würde</span> ich ein Haus in Zürich kaufen. |
+*   <span style="color: red;">Wenn</span> <span style="color: green;">ich reich wäre</span>, <span style="color: green;">(dann)</span> <span style="color: red;">würde</span> <span style="color: green;">ich nach Zug ziehen</span>.
+*   <span style="color: red;">Wenn</span> <span style="color: green;">meine Frau einen teuren BMW hätte</span>, <span style="color: red;">würde</span> <span style="color: green;">ich die ganze Zeit den BMW fahren</span>.
+*   <span style="color: red;">Wenn</span> <span style="color: green;">meine L. heute krank wäre</span>, <span style="color: red;">würde</span> <span style="color: green;">ich nach Hause gehen</span>.
 
 ---
 
-### 🔄 Alternative Word Order
+1) <span style="border: 1.5px solid red; padding: 2px;">Wenn</span> ich 10. Mio CHF <span style="color: green;">[</span>gewinnen würde<span style="color: green;">]</span>, (dann) <span style="border: 1.5px solid red; padding: 2px;">würde</span> ich ein Haus in Z. <span style="border: 1.5px solid red; padding: 2px;">kaufen.</span>
 
-The *wenn*-clause can also come after the main clause:
-
-*   **Ich <span style="color: red; font-weight: bold;">würde</span>** ein Haus kaufen, **wenn** ich 10 Mio. CHF gewinnen <span style="color: red; font-weight: bold;">würde</span>.
-
-> [Note: Board marks subject `S`, verb `V`, and object `O` in the main clause.]
+2) Ich<sup>S</sup> würde<sup>V</sup> ein Haus<sup>O</sup> kaufen, wenn ich 10. Mio CHF gewinnen würde.

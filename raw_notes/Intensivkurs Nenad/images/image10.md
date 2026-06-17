@@ -1,24 +1,24 @@
 Warum ist <span style="text-decoration: underline;">Fast Food</span> schlecht für die Gesundheit?
 
-<span style="text-decoration: underline;">Weil</span> es wenige Nährstoffe hat.
+Weil es<sup>S</sup> wenige Nährstoffe hat<sup>V</sup>.
 
 ---
 
 Warum essen viele Menschen weniger <span style="text-decoration: underline;">Fleisch</span>?
 
-<span style="text-decoration: underline;">Weil</span> sie sich gesund ernähren.
+Weil sie<sup>S</sup> sich gesund ernähren<sup>V</sup>.
 
-<span style="text-decoration: underline;">Weil</span> sie Geld sparen wollen.
+Weil sie<sup>S</sup> Geld sparen wollen<sup>V</sup>.
 
 ---
 
 Warum isst man <span style="text-decoration: underline;">vegetarisch</span>?
 
-<span style="text-decoration: underline;">Weil</span> man alle Tiere schützen möchte.
+Weil man<sup>S</sup> alle Tiere schützen möchte<sup>V</sup>.
 
 ---
 
-Warum wird man Veganer/in?
+Warum wird man <span style="text-decoration: underline;">Veganer/in</span>?
 
-<span style="text-decoration: underline;">Weil</span> man eine Allergie auf Tierprodukte hat.
+Weil man<sup>S</sup> eine Allergie auf Tierprodukte hat<sup>V</sup>.
 

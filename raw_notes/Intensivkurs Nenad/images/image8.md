@@ -1,40 +1,40 @@
 # -ge-
 
-<span style="text-decoration: underline;">durch</span>lesen, hat durch<span style="color: #8b0000; text-decoration: underline;">ge</span>lesen
+<span style="border: 1.5px solid green; padding: 2px;">durch</span><span style="color: green; text-decoration: underline;">lesen</span>, hat <span style="border: 1.5px solid green; padding: 2px;">durch</span><span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span><span style="color: green; text-decoration: underline;">lesen</span>
 
-<span style="text-decoration: underline;">ein</span>kreisen, hat ein<span style="color: #8b0000; text-decoration: underline;">ge</span>kreist
+<span style="color: red; text-decoration: underline;">ein</span><span style="color: green; text-decoration: underline;">kreisen</span>, hat <span style="color: red; text-decoration: underline;">ein</span><span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span><span style="color: green; text-decoration: underline;">kreis</span><span style="color: red; text-decoration: underline;">t</span>
 
-(kein ge) übersetzen, hat übersetzt
+(kein ge) über<span style="color: red; text-decoration: underline;">setz</span>en, hat über<span style="color: red; text-decoration: underline;">setz</span><span style="color: red; text-decoration: underline;">t</span>
 
-(kein ge) zubereiten, hat zubereitet
+(kein ge) zu<span style="color: red; text-decoration: underline;">bereit</span>en, hat zu<span style="color: red; text-decoration: underline;">bereit</span>e<span style="color: red; text-decoration: underline;">t</span>
 
-essen, hat gegessen
+essen, hat <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>gessen
 
-sich ernähren, hat sich ernährt
+sich ernähren, hat sich ernähr<span style="color: red; text-decoration: underline;">t</span>
 
-(Geld) sparen, hat gespart
+(Geld) sparen, hat <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>spar<span style="color: red; text-decoration: underline;">t</span>
 
-schützen, hat geschützt
+schützen, hat <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>schütz<span style="color: red; text-decoration: underline;">t</span>
 
-nachdenken (über), hat nach<span style="color: #8b0000; text-decoration: underline;">ge</span>dacht
+<span style="border: 1.5px solid green; padding: 2px;">nach</span><span style="color: green; text-decoration: underline;">denken</span> (über), hat <span style="border: 1.5px solid green; padding: 2px;">nach</span><span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span><span style="color: green; text-decoration: underline;">d</span><span style="color: red; text-decoration: underline;">a</span><span style="color: green; text-decoration: underline;">cht</span>
 
-laufen, ist gelaufen
+laufen, ist <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>laufen
 
-sich setzen, hat sich gesetzt
+sich setzen, hat sich <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>setz<span style="color: red; text-decoration: underline;">t</span>
 
-rennen, ist gerannt
+rennen, ist <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>r<span style="color: red; text-decoration: underline;">a</span>nnt
 
-fahren, ist gefahren
+fahren, ist <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>fahren
 
-empfangen, hat empfangen
+<span style="border: 1.5px solid green; padding: 2px;">emp</span><span style="color: green; text-decoration: underline;">fangen</span>, hat <span style="border: 1.5px solid green; padding: 2px;">emp</span><span style="color: green; text-decoration: underline;">fangen</span>
 
-singen, hat gesungen
+singen, hat <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>s<span style="color: red; text-decoration: underline;">u</span>ngen
 
-sich ausziehen, hat sich ausgezogen
+sich <span style="border: 1.5px solid green; padding: 2px;">aus</span><span style="color: green; text-decoration: underline;">ziehen</span>, hat sich <span style="border: 1.5px solid green; padding: 2px;">aus</span><span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span><span style="color: green; text-decoration: underline;">z</span><span style="color: red; text-decoration: underline;">o</span><span style="color: green; text-decoration: underline;">gen</span>
 
-nehmen, hat genommen
+nehmen, hat <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>n<span style="color: red; text-decoration: underline;">o</span>mmen
 
-stellen, hat gestellt
+stellen, hat <span style="color: red; border: 1.5px solid red; border-radius: 50%; padding: 1px 3px;">ge</span>stell<span style="color: red; text-decoration: underline;">t</span>
 
 ---
 
@@ -48,9 +48,9 @@ das Gericht -e
 
 die Speise -n
 
-die Bank -¨e = bench
+die Bank -"e bench
 
-die Bank -en = bank
+bank
 
 das Schlagzeug -e
 

@@ -1,30 +1,21 @@
-# 🚆 Travel Vocabulary & Movement Verbs
+# Vokabular
 
-> [Note: Board contains a vocabulary list plus a small drawing showing getting into, getting out of, and changing vehicles.]
+*   liegen
+*   der Durchschnitt Ø
+*   Zeit verbringen
+*   verbrauchen: wir verbrauche alle Eier
+*   der Schwager
+*   verschieden
+*   " wählen
+*   einsteigen
+*   verkaufen
 
----
-
-### 📚 Vocabulary
-
-| German | English / Meaning | Notes |
-| :--- | :--- | :--- |
-| **liegen** | to lie / be located | |
-| **der Durchschnitt** | average | symbol: `Ø` |
-| **Zeit verbringen** | to spend time | |
-| **verbrauchen** | to use up / consume | Example: *Wir verbrauchen alle Eier.* |
-| **der Schwager** | brother-in-law | |
-| **verschieden** | different / various | |
-| **wählen** | to choose / vote / dial | |
-| **überqueren** | to cross | |
+**überquere** (written in top right)
 
 ---
 
-### 🚗 Movement with Vehicles
-
-| Verb | Meaning | Visual Note |
-| :--- | :--- | :--- |
-| **einsteigen** | to get in / board | into vehicle A |
-| **aussteigen** | to get out | out of vehicle A |
-| **umsteigen** | to transfer / change | from vehicle A to vehicle B |
-| **verkaufen** | to sell | listed as vocabulary |
+### Movement (from drawing)
+*   einsteigen ➔ [ Car A ]
+*   [ Car A ] ➔ aussteigen
+*   [ Car A ] ➔ umsteigen ➔ [ Car B ]
 

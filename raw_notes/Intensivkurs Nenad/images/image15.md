@@ -1,96 +1,30 @@
-# 🔑 Lösungen Goethe B1 Tests 1-4
+# Lösungen Goethe B1 Tests 1-4
 
-This file contains the solutions for the Goethe B1 Practice Exams (Tests 1-4).
+## Test 1
 
----
+### Lesen 1
+1 richtig, 2 falsch, 3 richtig, 4 richtig, 5 richtig, 6 falsch
 
-## 📝 Test 1 Solutions
+### Lesen 2
+7c, 8c, 9a, 10b, 11a, 12a
 
-<details>
-<summary>👀 Click to reveal Test 1 Answer Key</summary>
+### Lesen 3
+13c, 14a, 15j, 16 x, 17e, 18f, 19d
 
-### 📚 Lesen (Reading)
+### Lesen 4
+20 nein, 21 ja, 22 ja, 23 nein, 24 ja, 25 nein, 26 nein
 
-#### Lesen 1
-1.  richtig
-2.  falsch
-3.  richtig
-4.  richtig
-5.  richtig
-6.  falsch
+### Lesen 5
+27c, 28b, 29c, 30b
 
-#### Lesen 2
-*   **7:** c
-*   **8:** c
-*   **9:** a
-*   **10:** b
-*   **11:** a
-*   **12:** a
+### Hören 1
+1 falsch, 2b, 3 richtig, 4c, 5 falsch, 6a, 7 richtig, 8a, 9 richtig, 10c
 
-#### Lesen 3
-*   **13:** c
-*   **14:** a
-*   **15:** j
-*   **16:** x
-*   **17:** e
-*   **18:** f
-*   **19:** d
+### Hören 2
+11b,12b,13c,14c,15c
 
-#### Lesen 4
-*   **20:** nein
-*   **21:** ja
-*   **22:** ja
-*   **23:** nein
-*   **24:** ja
-*   **25:** nein
-*   **26:** nein
+### Hören 3
+16 richtig, 17 falsch, 18 falsch, 19 richtig, 20 falsch, 21 falsch, 22 richtig
 
-#### Lesen 5
-*   **27:** c
-*   **28:** b
-*   **29:** c
-*   **30:** b
-
----
-
-### 🎧 Hören (Listening)
-
-#### Hören 1
-*   **1:** falsch
-*   **2:** b
-*   **3:** richtig
-*   **4:** c
-*   **5:** falsch
-*   **6:** a
-*   **7:** richtig
-*   **8:** a
-*   **9:** richtig
-*   **10:** c
-
-#### Hören 2
-*   **11:** b
-*   **12:** b
-*   **13:** c
-*   **14:** c
-*   **15:** c
-
-#### Hören 3
-*   **16:** richtig
-*   **17:** falsch
-*   **18:** falsch
-*   **19:** richtig
-*   **20:** falsch
-*   **21:** falsch
-*   **22:** richtig
-
-#### Hören 4
-*   **23:** a
-*   **24:** a
-*   **25:** b
-*   **26:** c
-*   **27:** b
-*   **28:** c
-*   **29:** c
-*   **30:** b
-
-</details>
+### Hören 4
+23a, 24a, 25b, 26c, 27b, 28c, 29c, 30b

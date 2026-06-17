@@ -1,8 +1,8 @@
 # "hin" / "her"
 
-Wohin?
+Wo<span style="text-decoration: underline;">hin</span>?
 
-Woher?
+Wo<span style="text-decoration: underline;">her</span>?
 
 ---
 
@@ -30,17 +30,17 @@ e -> i
 
 # Vokabular
 
-Selten - rarely
+selten - rarely
 
-reden ~ sprechen
+reden ≃ sprechen
 
 Ich rede viel / wenig.
 
-Ich rede mit meiner Frau.
+Ich rede<sup>(spreche)</sup> mit meiner Frau.
 
 Ich spreche Serbisch.
 
-treiben ~ tun ~ machen
+treiben ≃ tun ≃ machen
 
 abwaschen
 
@@ -52,7 +52,7 @@ wischen
 
 bügeln
 
-einkaufen ~ kaufen
+einkaufen ≃ kaufen
 
 ausschlafen vs. aufwachen
 
