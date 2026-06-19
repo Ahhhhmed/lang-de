@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ein ruhiger Morgen in Zürich - Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #f6f7f9;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #eef2f6;
+            --text-primary: #111827;
+            --text-secondary: #536072;
+            --text-muted: #7b8794;
+            --border-color: #d9e0e8;
+            --accent: #2563eb;
+            --shadow: 0 12px 32px rgb(17 24 39 / 0.08);
+        }
+
+        html[data-theme="dark"] {
+            --bg-primary: #0d1117;
+            --bg-secondary: #151b23;
+            --bg-tertiary: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #a7b0bd;
+            --text-muted: #7d8794;
+            --border-color: #2f3a48;
+            --accent: #60a5fa;
+            --shadow: 0 18px 44px rgb(0 0 0 / 0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        h1, h2, h3, .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .page {
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 28px 0 48px;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-link {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 750;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .btn-theme {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-theme:hover {
+            border-color: var(--accent);
+        }
+
+        .hero {
+            padding: 34px 0 26px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            line-height: 1;
+            letter-spacing: 0;
+            margin-bottom: 14px;
+        }
+
+        .subtitle {
+            max-width: 720px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.02rem;
+        }
+
+        .story-shell {
+            display: grid;
+            grid-template-columns: 230px minmax(0, 1fr);
+            gap: 22px;
+            align-items: start;
+            border-top: 1px solid var(--border-color);
+            padding-top: 26px;
+        }
+
+        .story-controls {
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 16px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 650;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+            flex: 0 0 auto;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background-color: var(--border-color);
+            transition: 0.2s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            width: 18px;
+            height: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: #fff;
+            transition: 0.2s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--accent);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        .legend {
+            display: grid;
+            gap: 9px;
+            margin-top: 18px;
+            color: var(--text-secondary);
+            font-size: 0.83rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-swatch {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            background: #1a73e8;
+            flex: 0 0 auto;
+        }
+
+        .legend-swatch.fem { background: #d93025; }
+        .legend-swatch.neut { background: #188038; }
+        .legend-swatch.plur { background: #a142f4; }
+        .legend-swatch.verb { background: #4b0082; }
+        .legend-swatch.dativ {
+            background: transparent;
+            border-bottom: 3px solid #8ab4f8;
+        }
+        .legend-swatch.akkusativ {
+            background: transparent;
+            border-bottom: 3px solid #81c995;
+        }
+
+        .story-card {
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: clamp(22px, 4vw, 34px);
+            box-shadow: var(--shadow);
+        }
+
+        .story-kicker {
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .story-title {
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            margin-bottom: 18px;
+        }
+
+        .story-text {
+            color: var(--text-secondary);
+            font-size: 1.04rem;
+            line-height: 1.9;
+        }
+
+        .story-text.is-highlighted {
+            color: #111827;
+            background: #ffffff;
+            border: 1px solid #d9e0e8;
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            margin-top: 34px;
+            padding-top: 22px;
+            color: var(--text-muted);
+            font-size: 0.84rem;
+        }
+
+        .icon-sun { display: none; }
+        html[data-theme="light"] .icon-moon { display: none; }
+        html[data-theme="light"] .icon-sun { display: block; }
+
+        @media (max-width: 760px) {
+            .story-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .story-controls {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a class="nav-link" href="../index.html">Zurück zu Artefakten</a>
+            <button class="btn-theme" onclick="toggleTheme()" aria-label="Theme umschalten">
+                <svg class="icon-moon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.38 5.38 0 0 1-4.4 2.26 5.4 5.4 0 0 1-4.14-9.5c.3-.08.58-.14.88-.16-.42-.16-.86-.24-1.24-.24z"/></svg>
+                <svg class="icon-sun" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM5.64 5.64a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.42 1.42L5.64 7.05a1 1 0 0 1 0-1.41zm11.31 11.31a1 1 0 0 1 1.42 0l1.41 1.41a1 1 0 0 1-1.41 1.42l-1.41-1.42a1 1 0 0 1 0-1.41zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm16 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM7.05 18.36a1 1 0 0 1 0 1.42l-1.42 1.41a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0zm11.31-11.3a1 1 0 0 1 0-1.42l1.42-1.41a1 1 0 0 1 1.41 1.41l-1.42 1.42a1 1 0 0 1-1.41 0z"/></svg>
+            </button>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="eyebrow">A2/B1 Lesetext</div>
+                <h1>Ein ruhiger Morgen in Zürich</h1>
+                <p class="subtitle">Eine kurze Alltagsszene zum Lesen mit zuschaltbarer Grammatikmarkierung nach der Strategie für Nomen, Verben, Nebensätze und getrennte Dativ-/Akkusativ-Phrasen.</p>
+            </section>
+
+            <section class="story-shell" aria-label="Story mit Markierungen">
+                <aside class="story-controls">
+                    <div class="toggle-container">
+                        <span>Grammatik markieren</span>
+                        <label class="switch">
+                            <input type="checkbox" id="highlightToggle" onchange="toggleHighlight()">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="legend" aria-label="Markierungslegende">
+                        <div class="legend-item"><span class="legend-swatch"></span><span>der-Wörter</span></div>
+                        <div class="legend-item"><span class="legend-swatch fem"></span><span>die-Wörter</span></div>
+                        <div class="legend-item"><span class="legend-swatch neut"></span><span>das-Wörter</span></div>
+                        <div class="legend-item"><span class="legend-swatch plur"></span><span>Plural</span></div>
+                        <div class="legend-item"><span class="legend-swatch verb"></span><span>Verben</span></div>
+                        <div class="legend-item"><span class="legend-swatch dativ"></span><span>Dativ</span></div>
+                        <div class="legend-item"><span class="legend-swatch akkusativ"></span><span>Akkusativ</span></div>
+                    </div>
+                </aside>
+
+                <article class="story-card">
+                    <div class="story-kicker">Story</div>
+                    <h2 class="story-title">Ein ruhiger Morgen in Zürich</h2>
+                    <p class="story-text" id="storyText"></p>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Erstellt für strukturierte Deutschpraxis - Stand: Juni 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        const plainStory = `Am Samstag steht Lena früh auf, weil sie einen langen Tag geplant hat. Zuerst trinkt sie Kaffee in der Küche und schreibt eine kurze Liste. Danach fährt sie mit dem Tram zum Markt. Dort kauft sie frisches Brot, rote Tomaten und ein kleines Geschenk für ihre Nachbarin. Die Frau hat nämlich Geburtstag. Am Nachmittag trifft Lena ihren Bruder im Stadtzentrum. Sie gehen in ein Museum, weil das Wetter schlecht ist. Nach zwei Stunden sind sie müde, aber glücklich. Am Abend legt Lena das Geschenk vor die Tür der Nachbarin und klingelt. Die Nachbarin öffnet die Tür, lacht und sagt: "Komm herein, ich habe Kuchen gebacken."`;
+
+        const highlightedStory = `Am Samstag <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">steht</span> Lena früh <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">auf</span>, <span style="background-color:#ffe082; padding:0 4px; border-radius:3px; font-weight:bold;">weil</span> sie <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">en</span> lang<span style="font-weight:bold; font-style:italic; opacity:0.75;">en</span> <span style="color:#1a73e8; font-weight:bold;">Tag</span></span> <span style="font-style:italic; border-bottom:2px double #fbc02d;">geplant hat</span>. Zuerst <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">trinkt</span> sie <span style="color:#1a73e8; font-weight:bold;">Kaffee</span> <span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">in d<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span> <span style="color:#d93025; font-weight:bold;">Küche</span></span> und <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">schreibt</span> ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">e</span> kurz<span style="font-weight:bold; font-style:italic; opacity:0.75;">e</span> <span style="color:#d93025; font-weight:bold;">Liste</span>. Danach <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">fährt</span> sie <span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">mit d<span style="font-weight:bold; font-style:italic; opacity:0.75;">em</span> <span style="color:#188038; font-weight:bold;">Tram</span></span> <span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">zum <span style="color:#1a73e8; font-weight:bold;">Markt</span></span>. Dort <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">kauft</span> sie frisch<span style="font-weight:bold; font-style:italic; opacity:0.75;">es</span> <span style="color:#188038; font-weight:bold;">Brot</span>, rot<span style="font-weight:bold; font-style:italic; opacity:0.75;">e</span> <span style="color:#a142f4; font-weight:bold;">Tomaten</span> und <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">ein klein<span style="font-weight:bold; font-style:italic; opacity:0.75;">es</span> <span style="color:#188038; font-weight:bold;">Geschenk</span></span> für ihr<span style="font-weight:bold; font-style:italic; opacity:0.75;">e</span> <span style="color:#d93025; font-weight:bold;">Nachbarin</span>. <span style="color:#d93025; font-weight:bold;">Die Frau</span> <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">hat</span> nämlich <span style="color:#1a73e8; font-weight:bold;">Geburtstag</span>. Am Nachmittag <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">trifft</span> Lena ihr<span style="font-weight:bold; font-style:italic; opacity:0.75;">en</span> <span style="color:#1a73e8; font-weight:bold;">Bruder</span> <span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">im <span style="color:#188038; font-weight:bold;">Stadtzentrum</span></span>. Sie <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">gehen</span> <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">in ein <span style="color:#188038; font-weight:bold;">Museum</span></span>, <span style="background-color:#ffe082; padding:0 4px; border-radius:3px; font-weight:bold;">weil</span> <span style="color:#188038; font-weight:bold;">das Wetter</span> schlecht <span style="font-style:italic; border-bottom:2px double #fbc02d;">ist</span>. Nach zwei <span style="color:#d93025; font-weight:bold;">Stunden</span> <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">sind</span> sie müde, aber glücklich. Am Abend <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">legt</span> Lena <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">das <span style="color:#188038; font-weight:bold;">Geschenk</span></span> <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">vor die <span style="color:#d93025; font-weight:bold;">Tür</span></span> d<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span> <span style="color:#d93025; font-weight:bold;">Nachbarin</span> und <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">klingelt</span>. <span style="color:#d93025; font-weight:bold;">Die Nachbarin</span> <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">öffnet</span> <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">die <span style="color:#d93025; font-weight:bold;">Tür</span></span>, <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">lacht</span> und <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">sagt</span>: "Komm herein, ich <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">habe</span> <span style="color:#1a73e8; font-weight:bold;">Kuchen</span> <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">gebacken</span>."`;
+
+        const storedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", storedTheme);
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        }
+
+        function renderStory(highlighted) {
+            const storyText = document.getElementById("storyText");
+            storyText.innerHTML = highlighted ? highlightedStory : plainStory;
+            storyText.classList.toggle("is-highlighted", highlighted);
+        }
+
+        function toggleHighlight() {
+            const highlighted = document.getElementById("highlightToggle").checked;
+            renderStory(highlighted);
+        }
+
+        renderStory(false);
+    </script>
+</body>
+</html>
