@@ -1,61 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>German Learning Resources</title>
+    <title>Deutsch Lernen — Lernressourcen</title>
+    <!-- Outfit & Inter Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+        :root {
+            /* Light Theme */
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border-color: #e2e8f0;
+            --accent: #4f46e5;
+            --accent-hover: #4338ca;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
         }
-        h1 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
+
+        html[data-theme="dark"] {
+            /* Dark Theme */
+            --bg-primary: #0b0f19;
+            --bg-secondary: #131b2e;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border-color: #1e293b;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.4);
         }
-        ul {
-            list-style-type: none;
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
             padding: 0;
         }
-        li {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background-color: #fafafa;
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            transition: background-color 0.2s, color 0.2s;
         }
-        a {
-            color: #1a73e8;
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .brand-badge {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: linear-gradient(135deg, var(--accent), #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-theme {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            box-shadow: var(--shadow);
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .btn-theme:hover {
+            background-color: var(--bg-primary);
+            border-color: var(--accent);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* --- CARDS GRID --- */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: var(--shadow-lg);
         }
-        p {
-            margin: 5px 0 0 0;
-            color: #666;
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background-color: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent);
+            border: 1px solid var(--border-color);
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .card:hover .card-icon {
+            background-color: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        .card-footer svg {
+            transition: transform 0.2s;
+        }
+
+        .card:hover .card-footer svg {
+            transform: translateX(4px);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 24px;
+        }
+
+        /* Sun/Moon visibility matching dashboard toggle */
+        .icon-sun { display: none; }
+        html[data-theme="light"] .icon-moon { display: none; }
+        html[data-theme="light"] .icon-sun { display: block; }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .subtitle {
+                font-size: 1rem;
+            }
+            .card {
+                padding: 24px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>German Learning Resources</h1>
-    <p>Welcome to my German study repository. Here are the published resources:</p>
-    
-    <ul>
-        <li>
-            <a href="intensivkurs-nenad/">Intensivkurs Nenad Notes</a>
-            <p>Interactive study notes from the A2/B1 Intensive German Course (June 2026).</p>
-        </li>
-        <li>
-            <a href="highlighting_strategy.md">Grammar Highlighting Strategy</a>
-            <p>Guide on how German texts are annotated with HTML styles for reading practice.</p>
-        </li>
-    </ul>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-top">
+                <div class="brand-badge">Deutsch Notizen</div>
+                <button class="btn-theme" onclick="toggleTheme()" aria-label="Theme umschalten">
+                    <!-- Moon Icon -->
+                    <svg class="icon-moon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.38 5.38 0 0 1-4.4 2.26 5.4 5.4 0 0 1-4.14-9.5c.3-.08.58-.14.88-.16-.42-.16-.86-.24-1.24-.24z"/></svg>
+                    <!-- Sun Icon -->
+                    <svg class="icon-sun" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM5.64 5.64a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.42 1.42L5.64 7.05a1 1 0 0 1 0-1.41zm11.31 11.31a1 1 0 0 1 1.42 0l1.41 1.41a1 1 0 0 1-1.41 1.42l-1.41-1.42a1 1 0 0 1 0-1.41zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm16 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM7.05 18.36a1 1 0 0 1 0 1.42l-1.42 1.41a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0zm11.31-11.3a1 1 0 0 1 0-1.42l1.42-1.41a1 1 0 0 1 1.41 1.41l-1.42 1.42a1 1 0 0 1-1.41 0z"/></svg>
+                </button>
+            </div>
+            <h1>Deutsch-Lernressourcen</h1>
+            <p class="subtitle">Willkommen in meiner interaktiven Lerndatenbank. Hier findest du die digitalisierten, strukturierten Notizen und Visualisierungstools für meinen Deutschkurs.</p>
+        </header>
+
+        <!-- Main Cards -->
+        <main class="cards-grid">
+            <!-- Card 1: Study Notes App -->
+            <a href="intensivkurs-nenad/" class="card">
+                <div class="card-icon">📖</div>
+                <div class="card-title">Intensivkurs Nenad Notizen</div>
+                <p class="card-desc">Die vollständigen, zusammengefassten Notizen aus dem A2/B1-Intensivkurs. Mit integrierter Live-Suche, interaktiver Grammatik-Markierung und komfortbarer Sidebar-Navigation.</p>
+                <div class="card-footer">
+                    <span>Notizen öffnen</span>
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+            </a>
+
+            <!-- Card 2: Highlighting Strategy Guide -->
+            <a href="highlighting_strategy.md" class="card">
+                <div class="card-icon">🎨</div>
+                <div class="card-title">Markierungsstrategie (Guide)</div>
+                <p class="card-desc">Eine detaillierte Übersicht darüber, wie deutsche Satzstrukturen und Wortarten farblich markiert werden (z. B. Genus von Nomen, Dativ-/Akkusativ-Satzglieder, Verben, Nebensätze).</p>
+                <div class="card-footer">
+                    <span>Guide ansehen</span>
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+            </a>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Erstellt mit Liebe zum Deutschlernen &bull; Stand: Juni 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        // Init theme matching storage or system preference
+        const storedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", storedTheme);
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute("data-theme");
+            const newTheme = currentTheme === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", newTheme);
+            localStorage.setItem("theme", newTheme);
+        }
+    </script>
 </body>
 </html>
