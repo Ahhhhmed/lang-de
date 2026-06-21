@@ -117,48 +117,6 @@
             border-color: var(--accent);
         }
 
-        .intro {
-            display: grid;
-            grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-            gap: 28px;
-            padding: 34px 0 28px;
-            align-items: end;
-        }
-
-        .intro p {
-            max-width: 760px;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 1.03rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-
-        .stat {
-            border: 1px solid var(--border-color);
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            padding: 14px;
-        }
-
-        .stat strong {
-            display: block;
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.6rem;
-        }
-
-        .stat span {
-            display: block;
-            margin-top: 2px;
-            color: var(--text-muted);
-            font-size: 0.78rem;
-            line-height: 1.35;
-        }
-
         .section {
             padding: 26px 0;
             border-top: 1px solid var(--border-color);
@@ -246,10 +204,6 @@
         html[data-theme="light"] .icon-sun { display: block; }
 
         @media (max-width: 820px) {
-            .intro {
-                grid-template-columns: 1fr;
-            }
-
             .artifact-row {
                 grid-template-columns: 1fr;
                 gap: 8px;
@@ -270,9 +224,6 @@
                 align-items: flex-start;
             }
 
-            .stats {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -288,26 +239,6 @@
                 <svg class="icon-sun" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM5.64 5.64a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.42 1.42L5.64 7.05a1 1 0 0 1 0-1.41zm11.31 11.31a1 1 0 0 1 1.42 0l1.41 1.41a1 1 0 0 1-1.41 1.42l-1.41-1.42a1 1 0 0 1 0-1.41zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm16 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM7.05 18.36a1 1 0 0 1 0 1.42l-1.42 1.41a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0zm11.31-11.3a1 1 0 0 1 0-1.42l1.42-1.41a1 1 0 0 1 1.41 1.41l-1.42 1.42a1 1 0 0 1-1.41 0z"/></svg>
             </button>
         </header>
-
-        <section class="intro" aria-labelledby="intro-title">
-            <div>
-                <p id="intro-title">Eine geordnete Ablage für die wichtigsten Lernartefakte: interaktive Notizen, Referenzen und kurze Lesetexte. Die Seite ist bewusst listenartig aufgebaut, damit du schnell erkennst, was ein Artefakt ist, wozu es dient und wohin es führt.</p>
-            </div>
-            <div class="stats" aria-label="Artefakt-Übersicht">
-                <div class="stat">
-                    <strong>1</strong>
-                    <span>interaktive Notizen-App</span>
-                </div>
-                <div class="stat">
-                    <strong>1</strong>
-                    <span>Markierungsreferenz</span>
-                </div>
-                <div class="stat">
-                    <strong>1</strong>
-                    <span>Story-Leseseite</span>
-                </div>
-            </div>
-        </section>
 
         <main>
             <section class="section" aria-labelledby="artifact-heading">

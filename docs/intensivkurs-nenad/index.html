@@ -345,6 +345,22 @@
             box-shadow: var(--shadow-lg);
         }
 
+        .note-section {
+            scroll-margin-top: 24px;
+            padding-top: 8px;
+            margin-top: 40px;
+        }
+
+        .note-section:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        .note-section + .note-section {
+            border-top: 1px solid var(--border-color);
+            padding-top: 40px;
+        }
+
         /* --- MOBILE TOGGLE --- */
         .mobile-header {
             display: none;
@@ -744,7 +760,7 @@
                     link.className = `menu-link ${item.id === activeSectionId ? 'active' : ''}`;
                     link.innerText = item.title;
                     link.onclick = () => {
-                        navigateTo(item.id);
+                        scrollToSection(item.id);
                         // Close sidebar on mobile
                         document.getElementById("sidebar").classList.remove("open");
                     };
@@ -757,62 +773,86 @@
                 sidebarMenu.appendChild(catDiv);
             }
         }
-        
-        // Navigate between pages
-        function navigateTo(sectionId) {
+
+        function getAllItems() {
+            return Object.values(appData).flat();
+        }
+
+        function findItem(sectionId) {
+            return getAllItems().find(item => item.id === sectionId);
+        }
+
+        function updateActiveSection(sectionId, updateHash = true) {
+            const activeItem = findItem(sectionId);
+            if (!activeItem || activeSectionId === sectionId) {
+                if (activeItem) {
+                    document.getElementById("headerTitle").innerText = activeItem.title;
+                }
+                return;
+            }
+
             activeSectionId = sectionId;
-            
-            // Find content item
-            let activeItem = null;
-            for (const catItems of Object.values(appData)) {
-                const found = catItems.find(item => item.id === sectionId);
-                if (found) {
-                    activeItem = found;
+            document.getElementById("headerTitle").innerText = activeItem.title;
+            renderSidebar();
+
+            if (updateHash) {
+                window.history.replaceState(null, null, `#${sectionId}`);
+            }
+        }
+
+        function renderAllContent() {
+            const contentCard = document.getElementById("contentCard");
+            contentCard.innerHTML = getAllItems().map(item => `
+                <section class="note-section" id="${item.id}">
+                    <h1>${item.title}</h1>
+                    ${item.html}
+                </section>
+            `).join("");
+
+            contentCard.classList.toggle("hl-active", highlightActive);
+            if (highlightActive) {
+                applyGrammarHighlighting(contentCard);
+            }
+
+            if (searchQuery) {
+                applySearchHighlighting(contentCard, searchQuery);
+            }
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (!section) return;
+
+            updateActiveSection(sectionId);
+            section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function syncActiveSectionFromScroll() {
+            const contentArea = document.querySelector(".content-area");
+            const areaTop = contentArea.getBoundingClientRect().top;
+            const sections = [...document.querySelectorAll(".note-section")];
+            let currentSectionId = activeSectionId;
+
+            for (const section of sections) {
+                const sectionTop = section.getBoundingClientRect().top - areaTop;
+                if (sectionTop <= 80) {
+                    currentSectionId = section.id;
+                } else {
                     break;
                 }
             }
-            
-            if (activeItem) {
-                // Set titles
-                document.getElementById("headerTitle").innerText = activeItem.title;
-                
-                const contentCard = document.getElementById("contentCard");
-                contentCard.innerHTML = `<h1>${activeItem.title}</h1>` + activeItem.html;
-                
-                // Refresh highlighted classes if active
-                if (highlightActive) {
-                    applyGrammarHighlighting(contentCard);
-                    contentCard.classList.add("hl-active");
-                } else {
-                    contentCard.classList.remove("hl-active");
-                }
-                
-                // Apply search highlights if searching
-                if (searchQuery) {
-                    applySearchHighlighting(contentCard, searchQuery);
-                }
-            }
-            
-            // Re-render sidebar links to update active state
-            renderSidebar();
-            
-            // Update URL hash
-            window.history.pushState(null, null, `#${sectionId}`);
+
+            updateActiveSection(currentSectionId);
         }
         
         // Highlight Switch
         function toggleHighlight() {
             const toggle = document.getElementById("highlightToggle");
             highlightActive = toggle.checked;
-            
-            const contentCard = document.getElementById("contentCard");
-            if (highlightActive) {
-                applyGrammarHighlighting(contentCard);
-                contentCard.classList.add("hl-active");
-            } else {
-                // Re-render plain HTML
-                navigateTo(activeSectionId);
-            }
+
+            renderAllContent();
+            const section = document.getElementById(activeSectionId);
+            if (section) section.scrollIntoView({ block: "start" });
         }
         
         // GRAMMAR HIGHLIGHTING ENGINE (DOM-safe parser)
@@ -967,8 +1007,10 @@
             // Re-render sidebar filtering
             renderSidebar();
             
-            // Re-render the active page to apply search term highlighting
-            navigateTo(activeSectionId);
+            // Re-render full document to apply or clear search term highlighting
+            renderAllContent();
+            const section = document.getElementById(activeSectionId);
+            if (section) section.scrollIntoView({ block: "start" });
         }
         
         function applySearchHighlighting(container, query) {
@@ -1015,20 +1057,19 @@
             
             // Read hash from URL to load initial section
             const hash = window.location.hash.substring(1);
-            if (hash) {
-                // Check if hash exists in data
-                let exists = false;
-                for (const catItems of Object.values(appData)) {
-                    if (catItems.some(item => item.id === hash)) {
-                        exists = true;
-                        break;
-                    }
-                }
-                if (exists) activeSectionId = hash;
+            if (hash && findItem(hash)) {
+                activeSectionId = hash;
             }
             
             renderSidebar();
-            navigateTo(activeSectionId);
+            renderAllContent();
+            updateActiveSection(activeSectionId, false);
+
+            const contentArea = document.querySelector(".content-area");
+            contentArea.addEventListener("scroll", syncActiveSectionFromScroll, { passive: true });
+
+            const initialSection = document.getElementById(activeSectionId);
+            if (initialSection) initialSection.scrollIntoView({ block: "start" });
         };
     </script>
 </body>
