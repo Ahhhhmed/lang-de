@@ -81,13 +81,16 @@
             transition: background-color 0.2s, border-color 0.2s;
         }
 
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             display: flex;
-            height: 100vh;
-            overflow: hidden;
         }
 
         h1, h2, h3, h4, .font-display {
@@ -364,6 +367,8 @@
         /* --- MOBILE TOGGLE --- */
         .mobile-header {
             display: none;
+            position: sticky;
+            top: 0;
             height: 60px;
             background-color: var(--bg-secondary);
             border-bottom: 1px solid var(--border-color);
@@ -372,6 +377,7 @@
             justify-content: space-between;
             width: 100%;
             z-index: 150;
+            flex-shrink: 0;
         }
 
         .btn-hamburger {
@@ -588,8 +594,12 @@
         @media (max-width: 1024px) {
             .sidebar {
                 position: fixed;
+                top: 0;
+                bottom: 0;
                 left: -320px;
+                z-index: 200;
                 transition: transform 0.3s ease;
+                height: 100%;
             }
             .sidebar.open {
                 transform: translateX(320px);
@@ -599,6 +609,9 @@
             }
             body {
                 flex-direction: column;
+            }
+            .main {
+                height: calc(100% - 60px);
             }
             .main-header {
                 display: none;
