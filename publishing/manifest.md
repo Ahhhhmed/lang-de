@@ -45,7 +45,7 @@ source:       (agent-generated — no source file)
 ```
 title:        Allgemeine Empfehlungen & Tipps
 type:         reference
-status:       draft
+status:       published
 output:       docs/tips/index.html
 action_label: Ansehen
 description:  Tipps und Empfehlungen der Sprachschule, um Deutsch in den Alltag zu integrieren.
@@ -59,7 +59,7 @@ source:       tips/README.md
 ```
 title:        Empfohlene Lernressourcen
 type:         reference
-status:       draft
+status:       published
 output:       docs/tips/resources.html
 action_label: Ansehen
 description:  Empfohlene Podcasts, Webseiten und TV-Sendungen für das selbstständige Lernen.

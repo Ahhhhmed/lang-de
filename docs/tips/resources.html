@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lernressourcen – Deutsch Lernen</title>
+    <meta name="description" content="Empfohlene Podcasts, Webseiten und TV-Sendungen für das selbstständige Lernen.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* === DESIGN TOKENS === */
+        :root {
+            --bg-primary:    #f6f7f9;
+            --bg-secondary:  #ffffff;
+            --bg-tertiary:   #eef2f6;
+            --text-primary:   #111827;
+            --text-secondary: #536072;
+            --text-muted:     #7b8794;
+            --border-color:  #d9e0e8;
+            --accent:        #2563eb;
+            --accent-hover:  #1d4ed8;
+            --accent-soft:   #dbeafe;
+            --good:    #15803d;
+            --warning: #b45309;
+            --shadow: 0 12px 32px rgb(17 24 39 / 0.08);
+        }
+        html[data-theme="dark"] {
+            --bg-primary:    #0d1117;
+            --bg-secondary:  #151b23;
+            --bg-tertiary:   #1f2937;
+            --text-primary:   #f3f4f6;
+            --text-secondary: #a7b0bd;
+            --text-muted:     #7d8794;
+            --border-color:  #2f3a48;
+            --accent:        #60a5fa;
+            --accent-hover:  #93c5fd;
+            --accent-soft:   #172554;
+            --good:    #4ade80;
+            --warning: #fbbf24;
+            --shadow: 0 18px 44px rgb(0 0 0 / 0.35);
+        }
+
+        /* === BASE === */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        a { color: inherit; }
+
+        h1, h2, h3, h4, .font-display { font-family: 'Outfit', sans-serif; }
+
+        h1 { font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.1; margin-bottom: 8px; }
+        h2 { font-size: 1.35rem; }
+        h3 { font-size: 1.1rem; margin-top: 18px; margin-bottom: 8px; color: var(--text-primary); }
+
+        /* === LAYOUT === */
+        .page {
+            width: min(980px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 28px 0 48px;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 28px;
+        }
+
+        .nav-link {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .nav-link:hover { text-decoration: underline; }
+
+        .btn-theme {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            box-shadow: var(--shadow);
+        }
+        .btn-theme:hover { border-color: var(--accent); }
+
+        .icon-sun { display: none; }
+        html[data-theme="light"] .icon-moon { display: none; }
+        html[data-theme="light"] .icon-sun  { display: block; }
+
+        .hero {
+            padding: 10px 0 28px;
+        }
+
+        .subtitle {
+            max-width: 720px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .section {
+            padding: 28px 0;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-header {
+            margin-bottom: 16px;
+        }
+
+        /* List Styling */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Callout Box */
+        .callout {
+            border-left: 3px solid var(--accent);
+            background: var(--bg-secondary);
+            border-radius: 0 6px 6px 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            box-shadow: var(--shadow);
+        }
+        .callout-note { border-left-color: var(--accent); }
+        .callout-tip { border-left-color: var(--good); }
+
+        .callout-label {
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+        }
+
+        /* Card layout for items */
+        .resource-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .resource-card h3 {
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .resource-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding-top: 22px;
+            color: var(--text-muted);
+            font-size: 0.84rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 560px) {
+            .page { width: min(100% - 24px, 980px); padding-top: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <a href="index.html" class="nav-link">← Zurück zu Tipps</a>
+            <button class="btn-theme" onclick="toggleTheme()" aria-label="Theme umschalten">
+                <svg class="icon-moon" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.38 5.38 0 0 1-4.4 2.26 5.4 5.4 0 0 1-4.14-9.5c.3-.08.58-.14.88-.16-.42-.16-.86-.24-1.24-.24z"/></svg>
+                <svg class="icon-sun"  width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 16a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zM5.64 5.64a1 1 0 0 1 1.41 0l1.42 1.42a1 1 0 0 1-1.42 1.42L5.64 7.05a1 1 0 0 1 0-1.41zm11.31 11.31a1 1 0 0 1 1.42 0l1.41 1.41a1 1 0 0 1-1.41 1.42l-1.41-1.42a1 1 0 0 1 0-1.41zM2 12a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1zm16 0a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2h-2a1 1 0 0 1-1-1zM7.05 18.36a1 1 0 0 1 0 1.42l-1.42 1.41a1 1 0 0 1-1.41-1.41l1.42-1.42a1 1 0 0 1 1.41 0zm11.31-11.3a1 1 0 0 1 0-1.42l1.42-1.41a1 1 0 1 1.41 1.41l-1.42 1.42a1 1 0 0 1-1.41 0z"/></svg>
+            </button>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Empfohlene Lernressourcen</h1>
+                <p class="subtitle">Eine kuratierte Liste von Audio-, Podcast- und Video-Ressourcen für das selbstständige Eintauchen in die deutsche Sprache.</p>
+            </section>
+
+            <section class="section" aria-labelledby="audio-heading">
+                <div class="section-header">
+                    <h2 id="audio-heading">Audio & Hören</h2>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Deutsche Welle (DW)</h3>
+                    <ul>
+                        <li><strong>Langsam gesprochene Nachrichten:</strong> Großartig für das Hörverstehen, auch wenn es am Anfang nicht ganz einfach ist.</li>
+                        <li><strong>Deutschtrainer:</strong> Bietet gut strukturierte Lektionen für den Vokabel- und Grammatikaufbau.</li>
+                        <li><strong>Empfohlene Lesethemen:</strong> z.B. <em>"Wie politisch ist die Fußball-WM 2026?"</em></li>
+                    </ul>
+                    <a href="https://learngerman.dw.com" target="_blank" rel="noopener" class="resource-link">learngerman.dw.com besuchen →</a>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Podcasts</h3>
+                    <ul>
+                        <li><strong>Easy German Podcast:</strong> Sehr beliebt, unterhaltsam und alltagsnah. Bietet Transkripte und Vokabelhilfen.
+                            <br><a href="https://www.easygerman.org/podcast" target="_blank" rel="noopener" class="resource-link">easygerman.org/podcast</a>
+                        </li>
+                        <li style="margin-top: 12px;"><strong>Slow German:</strong> Von Annik Rubens gesprochene, kurze und verständliche Beiträge über deutsche Kultur und Geschichte.
+                            <br><a href="https://slowgerman.com/" target="_blank" rel="noopener" class="resource-link">slowgerman.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section" aria-labelledby="video-heading">
+                <div class="section-header">
+                    <h2 id="video-heading">Video (TV-Sendungen & Filme)</h2>
+                </div>
+
+                <div class="callout callout-note">
+                    <div class="callout-label">Grundregel</div>
+                    <p>Schauen Sie Videos und Filme auf Deutsch immer <strong>MIT Untertiteln</strong> (idealerweise deutsche Untertitel für das Mitlesen).</p>
+                </div>
+
+                <div class="callout callout-tip">
+                    <div class="callout-label">Tipp</div>
+                    <p>Suchen Sie nach Serien oder Filmen, die Sie bereits kennen und mögen, und schauen Sie sich diese auf Hochdeutsch mit deutschen Untertiteln an. Da Sie die Handlung bereits kennen, können Sie sich voll und ganz auf das Vokabular und die Satzstrukturen konzentrieren.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Erstellt für strukturierte Deutschpraxis – Stand: Juni 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        const storedTheme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", storedTheme);
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute("data-theme");
+            const next    = current === "dark" ? "light" : "dark";
+            document.documentElement.setAttribute("data-theme", next);
+            localStorage.setItem("theme", next);
+        }
+    </script>
+</body>
+</html>
