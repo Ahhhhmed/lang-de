@@ -1,30 +1,132 @@
 # German Text Highlighting Strategy for Learning Assistance
 
-This document defines the visual highlighting strategy to be used by agents when generating or annotating German texts for reading practice. The goal is to help A1/A2 learners visually parse sentence structure, identify word types, recognize grammatical gender, and track declension markers.
+This document defines the visual highlighting strategy used when generating or annotating German texts for reading practice. It covers both **light mode** and **dark mode** values.
+
+All highlight colours are exposed as CSS custom properties (see the variable reference below). Inline `<span>` styles must use `var(--hl-xxx)` — **never hardcode hex values** in published HTML, so that dark mode works automatically.
 
 ---
 
 ## 🎨 Style Specification
 
-All styling must be applied using inline HTML `<span>` tags with `style` attributes to ensure compatibility with Markdown-rendered HTML.
-
-| Concept | Target / Rule | CSS Styling | HTML Example | Rendered Example |
+| Concept | Target / Rule | CSS Variable(s) | Light Value | Dark Value |
 | :--- | :--- | :--- | :--- | :--- |
-| **Masculine Noun** | Noun with *der* gender | `color: #1a73e8; font-weight: bold;` | `<span style="color:#1a73e8; font-weight:bold;">Tisch</span>` | <span style="color:#1a73e8; font-weight:bold;">Tisch</span> |
-| **Feminine Noun** | Noun with *die* gender | `color: #d93025; font-weight: bold;` | `<span style="color:#d93025; font-weight:bold;">Tür</span>` | <span style="color:#d93025; font-weight:bold;">Tür</span> |
-| **Neuter Noun** | Noun with *das* gender | `color: #188038; font-weight: bold;` | `<span style="color:#188038; font-weight:bold;">Bett</span>` | <span style="color:#188038; font-weight:bold;">Bett</span> |
-| **Plural Noun** | Noun in plural form | `color: #a142f4; font-weight: bold;` | `<span style="color:#a142f4; font-weight:bold;">Möbel</span>` | <span style="color:#a142f4; font-weight:bold;">Möbel</span> |
-| **Verb Parts** | Verb stems, auxiliaries, participles, reflexives | `color: #4b0082; font-weight: bold; border-bottom: 2px dotted #4b0082;` | `<span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">hat</span> ... <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">geholfen</span>` | <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">hat</span> ... <span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">geholfen</span> |
-| **Separable Prefix (Attached)** | Prefix part of a compound verb when not split | `border-bottom: 1px dashed #4b0082;` | `<span style="border-bottom:1px dashed #4b0082;">um</span>ziehen` | <span style="border-bottom:1px dashed #4b0082;">um</span>ziehen |
-| **Separable Prefix (Split)** | Prefix at the end of a clause | `color: #4b0082; font-style: italic; border-bottom: 2px dotted #4b0082;` | `... lädt ... <span style="color:#4b0082; font-style:italic; border-bottom:2px dotted #4b0082;">ein</span>` | ... lädt ... <span style="color:#4b0082; font-style:italic; border-bottom:2px dotted #4b0082;">ein</span> |
-| **Inseparable Prefix** | `ver-`, `be-`, `emp-`, `ent-` | `border-bottom: 1px dotted #9aa0a6; color: #5f6368;` | `<span style="border-bottom:1px dotted #9aa0a6; color:#5f6368;">ver</span>kaufen` | <span style="border-bottom:1px dotted #9aa0a6; color:#5f6368;">ver</span>kaufen |
-| **Dative Phrase** | Whole prepositional or object phrase governing Dativ. Keep visually distinct from Akkusativ. | `border-bottom: 2px solid #8ab4f8; padding-bottom: 1px;` | `<span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">in einer WG</span>` | <span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">in einer WG</span> |
-| **Accusative Phrase** | Whole prepositional or object phrase governing Akkusativ. Keep visually distinct from Dativ. | `border-bottom: 2px solid #81c995; padding-bottom: 1px;` | `<span style="border-bottom:2px solid #81c995; padding-bottom:1px;">auf den Tisch</span>` | <span style="border-bottom:2px solid #81c995; padding-bottom:1px;">auf den Tisch</span> |
-| **Declension Ending** | Suffix on articles and adjectives (`-e`, `-en`, `-em`, `-er`, `-es`) | `font-weight: bold; font-style: italic; opacity: 0.75;` | `ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span>` | ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span> |
-| **Subordinating Conjunction** | Conjunction triggering verb-last order | `background-color: #ffe082; padding: 0 4px; border-radius: 3px; font-weight: bold;` | `<span style="background-color:#ffe082; padding:0 4px; border-radius:3px; font-weight:bold;">weil</span>` | <span style="background-color:#ffe082; padding:0 4px; border-radius:3px; font-weight:bold;">weil</span> |
-| **Subordinated Verb** | Conjugated verb at the end of a subordinate clause | `font-style: italic; border-bottom: 2px double #fbc02d;` | `<span style="font-style:italic; border-bottom:2px double #fbc02d;">bin</span>` | <span style="font-style:italic; border-bottom:2px double #fbc02d;">bin</span> |
-| **Noun Gender Suffix** | `-ung`, `-heit`, `-keit`, `-schaft`, `-in` | `font-style: italic; opacity: 0.6;` | `Wohn<span style="font-style:italic; opacity:0.6;">ung</span>` | Wohn<span style="font-style:italic; opacity:0.6;">ung</span> |
-| **Vowel / Umlaut Mutation** | Changed letter in present tense, plural, or participle | `color: #d93025; font-weight: bold;` | `s<span style="color:#d93025; font-weight:bold;">ie</span>ht` | s<span style="color:#d93025; font-weight:bold;">ie</span>ht |
+| **Masculine Noun** | Noun with *der* gender | `--hl-masc` | `#1a73e8` | `#60a5fa` |
+| **Feminine Noun** | Noun with *die* gender | `--hl-fem` | `#d93025` | `#f87171` |
+| **Neuter Noun** | Noun with *das* gender | `--hl-neut` | `#188038` | `#4ade80` |
+| **Plural Noun** | Noun in plural form | `--hl-plur` | `#a142f4` | `#c084fc` |
+| **Verb Parts** | Verb stems, auxiliaries, participles, reflexives | `--hl-verb` (color + border) | `#4b0082` | `#a78bfa` |
+| **Separable Prefix (Attached)** | Prefix part of a compound verb when not split | `--hl-verb` (border only) | `#4b0082` | `#a78bfa` |
+| **Separable Prefix (Split)** | Prefix at the end of a clause | `--hl-verb` (color + border) | `#4b0082` | `#a78bfa` |
+| **Inseparable Prefix** | `ver-`, `be-`, `emp-`, `ent-` | `--hl-insep-color`, `--hl-insep-border` | `#5f6368` / `#9aa0a6` | `#9ca3af` / `#6b7280` |
+| **Dative Phrase** | Whole phrase governing Dativ | `--hl-dat-border` | `#8ab4f8` | `#93c5fd` |
+| **Accusative Phrase** | Whole phrase governing Akkusativ | `--hl-akk-border` | `#81c995` | `#86efac` |
+| **Declension Ending** | Suffix on articles and adjectives | *(no colour — opacity only)* | — | — |
+| **Subordinating Conjunction** | Conjunction triggering verb-last order | `--hl-conj-bg`, `--hl-conj-color` | `#ffe082` / `#111827` | `#4a3500` / `#fde68a` |
+| **Subordinated Verb** | Conjugated verb at end of subordinate clause | `--hl-subord-border` | `#fbc02d` | `#fcd34d` |
+| **Noun Gender Suffix** | `-ung`, `-heit`, `-keit`, `-schaft`, `-in` | *(no colour — opacity only)* | — | — |
+| **Vowel / Umlaut Mutation** | Changed letter in present tense, plural, or participle | `--hl-fem` (shared) | `#d93025` | `#f87171` |
+
+---
+
+## 🎨 CSS Variables Quick Reference
+
+Add these to both `:root` and `html[data-theme="dark"]` in every page that uses highlighting. See `html_templates.md` — they are already included in the design token block.
+
+```css
+/* === GRAMMAR HIGHLIGHTING — LIGHT MODE (:root) === */
+--hl-masc:          #1a73e8;   /* der-nouns — blue */
+--hl-fem:           #d93025;   /* die-nouns + mutation — red */
+--hl-neut:          #188038;   /* das-nouns — green */
+--hl-plur:          #a142f4;   /* plural nouns — purple */
+--hl-verb:          #4b0082;   /* verbs + separable prefixes — indigo */
+--hl-insep-color:   #5f6368;   /* inseparable prefix text — grey */
+--hl-insep-border:  #9aa0a6;   /* inseparable prefix underline */
+--hl-dat-border:    #8ab4f8;   /* dative phrase underline — light blue */
+--hl-akk-border:    #81c995;   /* accusative phrase underline — light green */
+--hl-conj-bg:       #ffe082;   /* subordinating conjunction background — amber */
+--hl-conj-color:    #111827;   /* subordinating conjunction text */
+--hl-subord-border: #fbc02d;   /* subordinated verb double-underline */
+
+/* === GRAMMAR HIGHLIGHTING — DARK MODE (html[data-theme="dark"]) === */
+--hl-masc:          #60a5fa;   /* der-nouns — lighter blue */
+--hl-fem:           #f87171;   /* die-nouns + mutation — lighter red */
+--hl-neut:          #4ade80;   /* das-nouns — lighter green */
+--hl-plur:          #c084fc;   /* plural nouns — lighter purple */
+--hl-verb:          #a78bfa;   /* verbs + separable prefixes — violet */
+--hl-insep-color:   #9ca3af;   /* inseparable prefix text — lighter grey */
+--hl-insep-border:  #6b7280;   /* inseparable prefix underline */
+--hl-dat-border:    #93c5fd;   /* dative phrase underline */
+--hl-akk-border:    #86efac;   /* accusative phrase underline */
+--hl-conj-bg:       #4a3500;   /* subordinating conjunction background — dark amber */
+--hl-conj-color:    #fde68a;   /* subordinating conjunction text — light amber */
+--hl-subord-border: #fcd34d;   /* subordinated verb double-underline */
+```
+
+---
+
+## 🛠 Inline Span Patterns
+
+Use these exact patterns in inline `style` attributes. All colours must go through CSS variables.
+
+### Noun Genders
+```html
+<!-- Masculine (der) -->
+<span style="color:var(--hl-masc); font-weight:bold;">Tisch</span>
+
+<!-- Feminine (die) -->
+<span style="color:var(--hl-fem); font-weight:bold;">Tür</span>
+
+<!-- Neuter (das) -->
+<span style="color:var(--hl-neut); font-weight:bold;">Bett</span>
+
+<!-- Plural -->
+<span style="color:var(--hl-plur); font-weight:bold;">Möbel</span>
+```
+
+### Verbs
+```html
+<!-- Verb part (stem, auxiliary, participle, reflexive) -->
+<span style="color:var(--hl-verb); font-weight:bold; border-bottom:2px dotted var(--hl-verb);">hat</span>
+
+<!-- Separable prefix — attached form -->
+<span style="border-bottom:1px dashed var(--hl-verb);">um</span>ziehen
+
+<!-- Separable prefix — split (at clause end) -->
+... lädt ... <span style="color:var(--hl-verb); font-style:italic; border-bottom:2px dotted var(--hl-verb);">ein</span>
+
+<!-- Inseparable prefix -->
+<span style="color:var(--hl-insep-color); border-bottom:1px dotted var(--hl-insep-border);">ver</span>kaufen
+```
+
+### Case Phrases
+```html
+<!-- Dative phrase -->
+<span style="border-bottom:2px solid var(--hl-dat-border); padding-bottom:1px;">in einer WG</span>
+
+<!-- Accusative phrase -->
+<span style="border-bottom:2px solid var(--hl-akk-border); padding-bottom:1px;">auf den Tisch</span>
+```
+
+### Declension & Mutation
+```html
+<!-- Declension ending (no colour — works in both themes unchanged) -->
+ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span>
+
+<!-- Noun gender suffix -->
+Wohn<span style="font-style:italic; opacity:0.6;">ung</span>
+
+<!-- Vowel / umlaut mutation (shares --hl-fem) -->
+s<span style="color:var(--hl-fem); font-weight:bold;">ie</span>ht
+```
+
+### Clause Structure
+```html
+<!-- Subordinating conjunction -->
+<span style="background-color:var(--hl-conj-bg); color:var(--hl-conj-color); padding:0 4px; border-radius:3px; font-weight:bold;">weil</span>
+
+<!-- Subordinated verb (verb-last in subordinate clause) -->
+<span style="font-style:italic; border-bottom:2px double var(--hl-subord-border);">bin</span>
+```
 
 ---
 
@@ -32,22 +134,21 @@ All styling must be applied using inline HTML `<span>` tags with `style` attribu
 
 When applying these rules, styles will often overlap. Apply nesting logically:
 
-1.  **Case Phrase Outer Boundary**: Dativ and Akkusativ must be marked separately. Use solid light-blue only for Dativ and solid light-green only for Akkusativ. The underline must wrap the *entire* phrase.
-2.  **Inflection Suffixes**: Inside the phrase, article and adjective suffixes get their bold/italic styling.
-3.  **Noun Gender**: Inside the phrase, the noun stem gets its gender color.
-4.  **Verbs in Participles**: A verb phrase (e.g. *umgezogen*) is wrapped in the verb style (dotted indigo), but internal prefixes or mutations get their respective nested styles.
+1. **Case Phrase Outer Boundary**: Dativ and Akkusativ must be marked separately — blue underline for Dativ, green for Akkusativ. The underline wraps the *entire* phrase.
+2. **Inflection Suffixes**: Inside the phrase, article and adjective suffixes get their bold/italic styling.
+3. **Noun Gender**: Inside the phrase, the noun stem gets its gender colour via `var(--hl-masc/fem/neut/plur)`.
+4. **Verbs in Participles**: A verb phrase is wrapped in the verb style (dotted underline via `var(--hl-verb)`), but internal prefixes or mutations get their respective nested styles.
 
-### Nested HTML Example:
+### Nested HTML Example
+
 ```html
-<!-- Dative phrase containing: possessive article with dative ending, adjective with dative ending, masculine noun -->
-<span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">
-  mit mein<span style="font-weight:bold; font-style:italic; opacity:0.75;">em</span> 
-  gross<span style="font-weight:bold; font-style:italic; opacity:0.75;">en</span> 
-  <span style="color:#1a73e8; font-weight:bold;">Bruder</span>
+<!-- Dative phrase: possessive + adjective with dative endings + masculine noun -->
+<span style="border-bottom:2px solid var(--hl-dat-border); padding-bottom:1px;">
+  mit mein<span style="font-weight:bold; font-style:italic; opacity:0.75;">em</span>
+  gross<span style="font-weight:bold; font-style:italic; opacity:0.75;">en</span>
+  <span style="color:var(--hl-masc); font-weight:bold;">Bruder</span>
 </span>
 ```
-**Rendered result:**
-<span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">mit mein<span style="font-weight:bold; font-style:italic; opacity:0.75;">em</span> gross<span style="font-weight:bold; font-style:italic; opacity:0.75;">en</span> <span style="color:#1a73e8; font-weight:bold;">Bruder</span></span>
 
 ---
 
@@ -58,16 +159,16 @@ When applying these rules, styles will often overlap. Apply nesting logically:
 
 **Annotated HTML:**
 ```html
-Ich wohne 
-<span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">in ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span> <span style="color:#d93025; font-weight:bold;">Wohn-gemein-<span style="font-style:italic; opacity:0.6;">schaft</span></span></span> 
-<span style="border-bottom:2px solid #8ab4f8; padding-bottom:1px;">am <span style="color:#1a73e8; font-weight:bold;">Stadtrand</span></span>. 
-Gestern 
-<span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">bin</span> ich 
-<span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;"><span style="border-bottom: 1px dashed #4b0082;">um</span>gez<span style="color:#d93025; font-weight:bold;">o</span>gen</span>. 
-<span style="background-color:#ffe082; padding:0 4px; border-radius:3px; font-weight:bold;">Weil</span> ich viele 
-<span style="color:#a142f4; font-weight:bold;">Möbel</span> 
-<span style="font-style:italic; border-bottom:2px double #fbc02d;">habe</span>, 
-<span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">hat</span> mir mein 
-<span style="color:#1a73e8; font-weight:bold;">Bruder</span> 
-<span style="color:#4b0082; font-weight:bold; border-bottom:2px dotted #4b0082;">geh<span style="color:#d93025; font-weight:bold;">o</span>lfen</span>.
+Ich wohne
+<span style="border-bottom:2px solid var(--hl-dat-border); padding-bottom:1px;">in ein<span style="font-weight:bold; font-style:italic; opacity:0.75;">er</span> <span style="color:var(--hl-fem); font-weight:bold;">Wohn-gemein-<span style="font-style:italic; opacity:0.6;">schaft</span></span></span>
+<span style="border-bottom:2px solid var(--hl-dat-border); padding-bottom:1px;">am <span style="color:var(--hl-masc); font-weight:bold;">Stadtrand</span></span>.
+Gestern
+<span style="color:var(--hl-verb); font-weight:bold; border-bottom:2px dotted var(--hl-verb);">bin</span> ich
+<span style="color:var(--hl-verb); font-weight:bold; border-bottom:2px dotted var(--hl-verb);"><span style="border-bottom:1px dashed var(--hl-verb);">um</span>gez<span style="color:var(--hl-fem); font-weight:bold;">o</span>gen</span>.
+<span style="background-color:var(--hl-conj-bg); color:var(--hl-conj-color); padding:0 4px; border-radius:3px; font-weight:bold;">Weil</span> ich viele
+<span style="color:var(--hl-plur); font-weight:bold;">Möbel</span>
+<span style="font-style:italic; border-bottom:2px double var(--hl-subord-border);">habe</span>,
+<span style="color:var(--hl-verb); font-weight:bold; border-bottom:2px dotted var(--hl-verb);">hat</span> mir mein
+<span style="color:var(--hl-masc); font-weight:bold;">Bruder</span>
+<span style="color:var(--hl-verb); font-weight:bold; border-bottom:2px dotted var(--hl-verb);">geh<span style="color:var(--hl-fem); font-weight:bold;">o</span>lfen</span>.
 ```

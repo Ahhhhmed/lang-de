@@ -52,6 +52,20 @@ Paste the following `<style>` block into every page's `<head>`. Do not change to
 
     /* Shadows */
     --shadow: 0 12px 32px rgb(17 24 39 / 0.08);
+
+    /* Grammar Highlighting */
+    --hl-masc:          #1a73e8;
+    --hl-fem:           #d93025;
+    --hl-neut:          #188038;
+    --hl-plur:          #a142f4;
+    --hl-verb:          #4b0082;
+    --hl-insep-color:   #5f6368;
+    --hl-insep-border:  #9aa0a6;
+    --hl-dat-border:    #8ab4f8;
+    --hl-akk-border:    #81c995;
+    --hl-conj-bg:       #ffe082;
+    --hl-conj-color:    #111827;
+    --hl-subord-border: #fbc02d;
 }
 
 html[data-theme="dark"] {
@@ -72,6 +86,20 @@ html[data-theme="dark"] {
     --warning: #fbbf24;
 
     --shadow: 0 18px 44px rgb(0 0 0 / 0.35);
+
+    /* Grammar Highlighting */
+    --hl-masc:          #60a5fa;
+    --hl-fem:           #f87171;
+    --hl-neut:          #4ade80;
+    --hl-plur:          #c084fc;
+    --hl-verb:          #a78bfa;
+    --hl-insep-color:   #9ca3af;
+    --hl-insep-border:  #6b7280;
+    --hl-dat-border:    #93c5fd;
+    --hl-akk-border:    #86efac;
+    --hl-conj-bg:       #4a3500;
+    --hl-conj-color:    #fde68a;
+    --hl-subord-border: #fcd34d;
 }
 ```
 
@@ -111,6 +139,11 @@ Every page starts with exactly this shell. Replace `<!-- TITLE -->` and `<!-- PA
             --good:    #15803d;
             --warning: #b45309;
             --shadow: 0 12px 32px rgb(17 24 39 / 0.08);
+            /* Grammar Highlighting */
+            --hl-masc:#1a73e8; --hl-fem:#d93025; --hl-neut:#188038; --hl-plur:#a142f4;
+            --hl-verb:#4b0082; --hl-insep-color:#5f6368; --hl-insep-border:#9aa0a6;
+            --hl-dat-border:#8ab4f8; --hl-akk-border:#81c995;
+            --hl-conj-bg:#ffe082; --hl-conj-color:#111827; --hl-subord-border:#fbc02d;
         }
         html[data-theme="dark"] {
             --bg-primary:    #0d1117;
@@ -126,6 +159,11 @@ Every page starts with exactly this shell. Replace `<!-- TITLE -->` and `<!-- PA
             --good:    #4ade80;
             --warning: #fbbf24;
             --shadow: 0 18px 44px rgb(0 0 0 / 0.35);
+            /* Grammar Highlighting */
+            --hl-masc:#60a5fa; --hl-fem:#f87171; --hl-neut:#4ade80; --hl-plur:#c084fc;
+            --hl-verb:#a78bfa; --hl-insep-color:#9ca3af; --hl-insep-border:#6b7280;
+            --hl-dat-border:#93c5fd; --hl-akk-border:#86efac;
+            --hl-conj-bg:#4a3500; --hl-conj-color:#fde68a; --hl-subord-border:#fcd34d;
         }
 
         /* === BASE === */
