@@ -459,17 +459,221 @@ For annotated German reading texts. The `.story-body` class sets comfortable lin
     }
     .btn-toggle:hover { border-color: var(--accent); color: var(--accent); }
     .btn-toggle.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+    /* Layout shell with sidebar and content */
+    .story-shell {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 22px;
+        align-items: start;
+        border-top: 1px solid var(--border-color);
+        padding-top: 26px;
+    }
+    .story-controls {
+        border: 1px solid var(--border-color);
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        padding: 16px;
+        position: sticky;
+        top: 20px;
+    }
+    .toggle-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--text-secondary);
+        font-size: 0.88rem;
+        font-weight: 650;
+    }
+
+    /* Toggle Switch */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+        flex: 0 0 auto;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: var(--border-color);
+        transition: 0.2s;
+        border-radius: 24px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        width: 18px;
+        height: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: #fff;
+        transition: 0.2s;
+        border-radius: 50%;
+    }
+    input:checked + .slider { background-color: var(--accent); }
+    input:checked + .slider:before { transform: translateX(20px); }
+
+    /* Comprehensive Legend Styling */
+    .legend {
+        display: grid;
+        gap: 9px;
+        margin-top: 18px;
+        color: var(--text-secondary);
+        font-size: 0.83rem;
+    }
+    .legend-group-title {
+        font-size: 0.7rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        margin-top: 14px;
+        margin-bottom: 4px;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 3px;
+    }
+    .legend-group-title:first-of-type { margin-top: 8px; }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .legend-swatch {
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        font-size: 0.65rem;
+        font-weight: bold;
+    }
+    .legend-swatch.masc      { background: var(--hl-masc); }
+    .legend-swatch.fem       { background: var(--hl-fem); }
+    .legend-swatch.neut      { background: var(--hl-neut); }
+    .legend-swatch.plur      { background: var(--hl-plur); }
+    .legend-swatch.verb {
+        background: transparent;
+        color: var(--hl-verb);
+        border-bottom: 2px dotted var(--hl-verb);
+        border-radius: 0;
+    }
+    .legend-swatch.pref-sep {
+        background: transparent;
+        border-bottom: 1px dashed var(--hl-verb);
+        border-radius: 0;
+    }
+    .legend-swatch.pref-insep {
+        background: transparent;
+        color: var(--hl-insep-color);
+        border-bottom: 1px dotted var(--hl-insep-border);
+        border-radius: 0;
+    }
+    .legend-swatch.dativ {
+        background: transparent;
+        border-bottom: 2.5px solid var(--hl-dat-border);
+        border-radius: 0;
+        height: 12px;
+    }
+    .legend-swatch.akkusativ {
+        background: transparent;
+        border-bottom: 2.5px solid var(--hl-akk-border);
+        border-radius: 0;
+        height: 12px;
+    }
+    .legend-swatch.conj {
+        background: var(--hl-conj-bg);
+        color: var(--hl-conj-color);
+        border-radius: 3px;
+        font-size: 0.6rem;
+        padding: 0 2px;
+    }
+    .legend-swatch.sub-verb {
+        background: transparent;
+        border-bottom: 2px double var(--hl-subord-border);
+        border-radius: 0;
+        height: 12px;
+    }
+    .legend-swatch.ending {
+        background: transparent;
+        font-style: italic;
+        font-weight: bold;
+        opacity: 0.75;
+        color: var(--text-primary);
+    }
+    .legend-swatch.suffix {
+        background: transparent;
+        font-style: italic;
+        opacity: 0.6;
+        color: var(--text-primary);
+    }
+    .legend-swatch.mutation {
+        background: transparent;
+        color: var(--hl-fem);
+        font-weight: bold;
+    }
+
+    @media (max-width: 760px) {
+        .story-shell { grid-template-columns: 1fr; }
+        .story-controls { position: static; }
+    }
 </style>
 
 <div class="story-meta">
     <span class="story-badge">A2/B1</span>
     <span class="story-badge">Lesetext</span>
 </div>
-<div class="story-body" id="story-text">
-    <p>
-        <!-- Paragraph with inline <span> grammar highlights -->
-    </p>
-</div>
+
+<section class="story-shell" aria-label="Story mit Markierungen">
+    <aside class="story-controls">
+        <div class="toggle-container">
+            <span>Grammatik markieren</span>
+            <label class="switch">
+                <input type="checkbox" id="highlightToggle" onchange="toggleHighlight()">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <div class="legend" aria-label="Markierungslegende">
+            <div class="legend-group-title">Nomen & Plural</div>
+            <div class="legend-item"><span class="legend-swatch masc"></span><span>Maskulin (der)</span></div>
+            <div class="legend-item"><span class="legend-swatch fem"></span><span>Feminin (die)</span></div>
+            <div class="legend-item"><span class="legend-swatch neut"></span><span>Neutral (das)</span></div>
+            <div class="legend-item"><span class="legend-swatch plur"></span><span>Plural</span></div>
+            
+            <div class="legend-group-title">Verben & Präfixe</div>
+            <div class="legend-item"><span class="legend-swatch verb">V</span><span>Verb / Partizip</span></div>
+            <div class="legend-item"><span class="legend-swatch pref-sep">um</span><span>Trennbares Präfix</span></div>
+            <div class="legend-item"><span class="legend-swatch pref-insep">be</span><span>Untrennbares Präfix</span></div>
+            
+            <div class="legend-group-title">Kasus (Phrasen)</div>
+            <div class="legend-item"><span class="legend-swatch dativ"></span><span>Dativ-Phrase</span></div>
+            <div class="legend-item"><span class="legend-swatch akkusativ"></span><span>Akkusativ-Phrase</span></div>
+            
+            <div class="legend-group-title">Nebensätze</div>
+            <div class="legend-item"><span class="legend-swatch conj">weil</span><span>Konjunktion</span></div>
+            <div class="legend-item"><span class="legend-swatch sub-verb">ist</span><span>Nebensatz-Verb</span></div>
+            
+            <div class="legend-group-title">Endungen & Details</div>
+            <div class="legend-item"><span class="legend-swatch ending">-er</span><span>Deklinationsendung</span></div>
+            <div class="legend-item"><span class="legend-swatch suffix">-ung</span><span>Nomen-Suffix</span></div>
+            <div class="legend-item"><span class="legend-swatch mutation">ä</span><span>Vokalwechsel (Umlaut)</span></div>
+        </div>
+    </aside>
+
+    <article class="story-card">
+        <div class="story-kicker">Story</div>
+        <h2 class="story-title"><!-- Story-Titel --></h2>
+        <p class="story-body" id="storyText">
+            <!-- Text content goes here -->
+        </p>
+    </article>
+</section>
 ```
 
 ---
