@@ -40,6 +40,34 @@ source:       (agent-generated — no source file)
 
 ---
 
+### `tips/index.html`
+
+```
+title:        Allgemeine Empfehlungen & Tipps
+type:         reference
+status:       draft
+output:       docs/tips/index.html
+action_label: Ansehen
+description:  Tipps und Empfehlungen der Sprachschule, um Deutsch in den Alltag zu integrieren.
+source:       tips/README.md
+```
+
+---
+
+### `tips/resources.html`
+
+```
+title:        Empfohlene Lernressourcen
+type:         reference
+status:       draft
+output:       docs/tips/resources.html
+action_label: Ansehen
+description:  Empfohlene Podcasts, Webseiten und TV-Sendungen für das selbstständige Lernen.
+source:       tips/resources.md
+```
+
+---
+
 ## Status Reference
 
 | Status | Meaning |
