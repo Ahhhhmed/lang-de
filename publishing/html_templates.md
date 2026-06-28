@@ -376,6 +376,17 @@ For annotated German reading texts. The `.story-body` class sets comfortable lin
     .story-body p { margin-bottom: 1.1em; }
     .story-body p:last-child { margin-bottom: 0; }
 
+    /* When grammar highlighting is active, keep colours theme-aware.
+       Never use hardcoded hex here — always use design token variables. */
+    .story-text.is-highlighted,
+    .story-body.is-highlighted {
+        color: var(--text-primary);
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 18px;
+    }
+
     .story-meta {
         display: flex;
         gap: 12px;
